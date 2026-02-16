@@ -1,0 +1,28 @@
+.radio-cat{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-label-container{
+    padding-top: 10px;
+    padding-left: 50px;
+    display: flex;
+    gap:7px;
+}
+
+.cats{
+    padding-top: 10px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.clear-btn{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+button{
+     border-radius: 7px;
+}

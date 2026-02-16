@@ -1,0 +1,45 @@
+.cart-layout{
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+   
+}
+
+.orders{
+    height: 10px;
+    background-color: #000;    
+}
+
+.summary{
+    padding: 10px;
+    /* background-color: red; */
+     border: 2px solid #ededed;
+     box-shadow: 10px 10px 10px 10px #ededed;
+}
+
+.order-summary{
+    /* width: 0.9fr; */
+    height: 600px;
+}
+
+h1{
+    font-size: 30px;
+}
+
+.total{
+    padding-top: 30px;
+    width: 0.9fr;
+    text-align: center;
+    font-size: 40px;
+}
+
+.order-btn{
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+   width: 300px;
+}

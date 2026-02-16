@@ -1,0 +1,33 @@
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 20px;
+}
+
+.categories{
+    padding: 5px;
+  border: 2px solid #ededed;
+}
+
+.products{
+  padding: 5px;
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .categories{
+    display: none;
+  }
+  .sidebar {
+    position: fixed;
+    left: -320px;
+  }
+
+  .sidebar--open {
+    left: 0;
+  }
+}
