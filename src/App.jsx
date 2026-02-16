@@ -1,6 +1,7 @@
 import React,{ useState } from 'react'
 import Home from './pages/Home'
-import { BrowserRouter,Routes,Route } from "react-router-dom";
+import { Routes,Route } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import CartPage from './pages/CartPage';
 
 const App = () => {
@@ -9,12 +10,13 @@ const App = () => {
 
   return (
     <div>
-      <BrowserRouter>
+      
+<HashRouter>
       <Routes>
         <Route  path="/Cart" element={<CartPage />}/>
         <Route  path="/" element={<Home />}/>
       </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   )
 }
