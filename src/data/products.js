@@ -97,6 +97,17 @@ const products =[
     rating : 2.5,
     image: "https://m.media-amazon.com/images/I/51KmxQjXBlL.jpg",
     description: "Ergonomic wireless mouse with long battery life."
+  },
+  {
+    id: 10,
+    name: "Wall Clock",
+    category: "Electronics",
+    price: 799,
+    color: 'white',
+    curr_price: 509,
+    rating : 3.5,
+    image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRwXpzYsxkHHvszS-aGTXR-R5eiDNCV6dBiIZCFRby1V9Sq33lp9Os_hpnk8u3g1Dlsc-H2H8Gqb9w1OqgYJcU5kE2GVS4SiO-K9IxBfwp_8te3EQufMLgFYamjm7nOQPh8okGIlvvL6A&usqp=CAc",
+    description: "Wall Clock"
   }
 ];
 
