@@ -39,4 +39,9 @@ button{
     border: 1px solid #ededed;
     cursor: pointer;
     background: greenyellow;
+     width: 300px;
+}
+
+#cart-btn:hover{
+    background: #7ED400;
 }
