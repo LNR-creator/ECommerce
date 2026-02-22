@@ -1,45 +1,34 @@
 import React from 'react'
 import '../styles/CartLayout.css'
-import img from '../assets/images/headphones.webp'
 
-const CartPagePart = () => {
+const CartPagePart = ({ cart, products }) => {
+
   return (
-    <div>
-      <div className="cart-layout">
-        <div className="orders">
-          <h1>MY CART</h1>
-          <br />
-          <div className="order-1">
-            <div className="img">
-              <img className='abcd' src={img}/>
-            </div>
-            
-            <div className="product-details">
-              <div className="product-name">Wired Headphones</div>
-            </div>
-          </div>
+    <div className="cart-layout">
 
-            <div className="order-1">
-            <div className="img">
-              <img className='abcd' src={img}/>
-            </div>
-            
-            <div className="product-details">
-              <div className="product-name">Wired Headphones</div>
-            </div>
-          </div>
+      <div className="orders">
+        <h1>MY CART</h1>
+        {cart.length === 0 && <h3> Your cart is empty</h3>}
+        {cart.map((id, index) => {
+          const product = products.find(p => p.id === id);
+          if (!product) return null;
+          return (
+            <div className="order-1" key={index}>
+              <div className="img">
+                <img id='cart-order-img' src={product.image} alt={product.name}/>
+              </div>
 
-           <div className="order-1">
-            <div className="img">
-              <img className='abcd' src={img}/>
+              <div className="product-details">
+                <div className="product-name">{product.name}</div>
+                <div className="price">₹{product.curr_price}</div>
+              </div>
             </div>
-            
-            <div className="product-details">
-              <div className="product-name">Wired Headphones</div>
-            </div>
-          </div>
-        </div>
-        <div className="summary">
+          );
+        })}
+      </div>
+
+        
+                <div className="summary">
             <div className="order-summary">
                
                 <div className="total">
@@ -53,7 +42,9 @@ const CartPagePart = () => {
                 </div>
             </div>
         </div>
-      </div>
+
+
+
     </div>
   )
 }

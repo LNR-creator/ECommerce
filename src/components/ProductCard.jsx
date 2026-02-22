@@ -1,11 +1,11 @@
 import React from 'react'
 import '../styles/ProductCard.css'
 
-const ProductCard = ({product}) => {
+const ProductCard = ({product,handlecart}) => {
   return (
     <div className='product-card'>
       <div className='product-img'>
-        <img className='pro-img' src={product.image}/>
+        <img className='pro-img' src={product.image} alt={product.name}/>
         </div>
       <div className="product-name">
         {product.name}
@@ -23,7 +23,7 @@ const ProductCard = ({product}) => {
       </div>
 
     <div className="buy-btn">
-      <button type="button" id='cart-btn'>Add to Cart</button>
+      <button type="button" id='cart-btn' onClick={()=> handlecart(product.id)} >Add to Cart</button>
     </div>
     </div>
   )

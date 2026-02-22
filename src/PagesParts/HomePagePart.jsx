@@ -3,7 +3,7 @@ import '../styles/HomePagePart.css'
 import SideBar from '../components/SideBar'
 import ProductList from '../components/ProductList'
 
-const HomePagePart = ({ products }) => {
+const HomePagePart = ({ products,handlecart }) => {
 
   const [filters,setFilters] = useState({
   category : "all",
@@ -21,7 +21,7 @@ const HomePagePart = ({ products }) => {
 
             <div className="products">
                 <div className="list">
-                   <ProductList products={products}  filters={filters} />
+                   <ProductList products={products}  filters={filters} handlecart={handlecart} />
                 </div>
             </div>
        </div>

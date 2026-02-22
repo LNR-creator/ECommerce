@@ -214,7 +214,7 @@ const SideBar = ({filters,setFilters}) => {
 
                 
                 <div className="clear-btn">
-                <button type="button" OnClick={handleClear}>
+                <button type="button" onClick={handleClear}>
                     Clear
                 </button>
             </div>

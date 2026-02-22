@@ -6,8 +6,8 @@ import '../styles/Home.css'
 import '../styles/ALL.css'
 import HomePagePart from '../PagesParts/HomePagePart'
 
-const Home = () => {
-
+const Home = ({handlecart}) => {
+ 
   return (
     <>
     <div className='Navbar'>
@@ -15,7 +15,7 @@ const Home = () => {
      </div>
 
      <div className="HomePagePart">
-     <HomePagePart products={products}  />
+     <HomePagePart products={products}  handlecart={handlecart}/>
      </div>
 
      <div className="footer">

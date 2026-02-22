@@ -3,7 +3,7 @@ import ProductCard from './ProductCard'
 import '../styles/ProductList.css'
 import '../styles/ALL.css'
 
-const ProductList = ({ products = [], filters }) => {
+const ProductList = ({ products = [], filters ,handlecart}) => {
   const filteredProducts = products.filter(p => {
     if (!filters) return true;
 
@@ -34,7 +34,7 @@ const ProductList = ({ products = [], filters }) => {
   return (
     <div className='product-list'>
       {filteredProducts.map((product) => (
-        <ProductCard key={product.id} product={product} />
+        <ProductCard key={product.id} product={product} handlecart = {handlecart} />
       ))}
     </div>
   )
