@@ -1,7 +1,9 @@
-import React from 'react'
+import React,{useState} from 'react'
 import '../styles/CartLayout.css'
 
 const CartPagePart = ({ cart, products }) => {
+
+  const [count,setcount] = useState(0);
 
   return (
     <div className="cart-layout">
@@ -21,28 +23,35 @@ const CartPagePart = ({ cart, products }) => {
               <div className="product-details">
                 <div className="product-name">{product.name}</div>
                 <div className="price">₹{product.curr_price}</div>
+
+                <div className="add-remove-btns-">
+                    <button className='product-incre' onClick={()=> setcount(count-1)}>-</button>
+                     {count}
+                    <button className='product-decre' onClick={()=> setcount(count+1)}>+</button>
+                    
+                </div>
               </div>
             </div>
           );
         })}
       </div>
 
-        
+      
                 <div className="summary">
             <div className="order-summary">
                
                 <div className="total">
                    <h1>Total</h1>
 
-                <p>₹1,000</p>
+                <p></p>
                 </div>
 
                 <div className="order-btn">
                     <button type="button" id='order-btn'>Order</button>
                 </div>
             </div>
+            
         </div>
-
 
 
     </div>

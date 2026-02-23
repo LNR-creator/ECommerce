@@ -97,6 +97,29 @@ h1{
 .add-remove-btns{
     display: flex;
     padding: 10px;
-    width: 100px;
-    gap: 7px;
+    width: 250px;
+    gap: 10px;
+    
+}
+
+.product-incre{
+    width: 30px;
+    height: 30px;
+    border: 1.5px solid black;
+    
+}
+.product-decre{
+    width: 30px;
+    height: 30px;
+    border: 1.5px solid black;
+   margin-left: 10px;
+}
+.product-incre:hover{
+    box-shadow: 5px 5px 5px 5px #ededed;
+    background: #ededed;
+}
+
+.product-decre:hover{
+    box-shadow: 5px 5px 5px 5px #ededed;
+    background: #ededed;
 }
