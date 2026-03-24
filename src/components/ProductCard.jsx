@@ -7,11 +7,11 @@ const ProductCard = ({product,handlecart}) => {
       <div className='product-img'>
         <img className='pro-img' src={product.image} alt={product.name}/>
         </div>
-      <div className="product-name">
+      <div className="product-title">
         {product.name}
       </div>
 
-    <div className="rating-box">
+    <div className="rating">
       <div className="rating">{product.rating}★</div>
     </div>
 
@@ -22,7 +22,7 @@ const ProductCard = ({product,handlecart}) => {
         <span className='new-price'>{product.curr_price}</span>
       </div>
 
-    <div className="buy-btn">
+    <div className="card-bottom">
       <button type="button" id='cart-btn' onClick={()=> handlecart(product.id)} >Add to Cart</button>
     </div>
     </div>

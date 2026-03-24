@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import '../styles/HomePagePart.css'
 import SideBar from '../components/SideBar'
 import ProductList from '../components/ProductList'
 
-const HomePagePart = ({ products,handlecart }) => {
+const HomePagePart = ({ products, category, handlecart }) => {
 
   const [filters,setFilters] = useState({
   category : "all",
@@ -11,6 +11,14 @@ const HomePagePart = ({ products,handlecart }) => {
   color : "all",
   rating : "all"
 });
+
+  useEffect(() => {
+    if (category === "All") {
+      setFilters((prev) => ({ ...prev, category: "all" }));
+    } else {
+      setFilters((prev) => ({ ...prev, category: category }));
+    }
+  }, [category]);
 
   return (
     <div>

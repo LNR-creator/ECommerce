@@ -3,9 +3,6 @@ import Navbar from '../components/Navbar'
 import CartPagePart from '../PagesParts/CartPagePart'
 
 const CartPage = ({cart,products}) => {
-
-
-
   return (
     <div>
       <Navbar />

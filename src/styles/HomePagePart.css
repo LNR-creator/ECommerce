@@ -12,6 +12,7 @@
 }
 
 .products{
+  width: 100%;
   padding: 5px;
 }
 
@@ -29,5 +30,22 @@
 
   .sidebar--open {
     left: 0;
+  }
+}
+
+@media (max-width: 600px)
+{
+  .layout{
+    gap: 10px;
+    padding: 10px;
+  }
+  .products{
+    padding: 0;
+  }
+
+  .list{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 }

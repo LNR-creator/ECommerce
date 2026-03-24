@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import logo from '../assets/images/logo1.png'
 import '../styles/Navbar.css'
 
@@ -7,6 +7,8 @@ import { FaCartShopping } from "react-icons/fa6";
 import { NavLink ,Link} from "react-router-dom";
 
 const Navbar = ({openCart}) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div>
       <header>
@@ -15,9 +17,12 @@ const Navbar = ({openCart}) => {
         <img  src={logo} className='navbar-logo' alt="" />
       </Link>
     </div>
-   
+    
+    <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)} >
 
-    <nav className="nav-links">
+    </div>
+
+    <nav className={menuOpen ? "nav-links open": "nav-links"}>
         <div className="nav-inner">
               {/* <div className="profile">
                 <a href=""><CgProfile /></a>

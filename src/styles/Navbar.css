@@ -15,7 +15,7 @@
   background: #000;
   color: white;
   padding: 8px 0;
-  height: 70px;
+  /* height: 70px; */
 }
 
 .nav-inner {
@@ -35,6 +35,7 @@
   font-size: 18px;
 }
 
+/* Responsive Design Code */
 @media (max-width: 520px) {
   .navbar-logo-container {
     justify-content: flex-start;
@@ -46,3 +47,56 @@
     gap: 6px;
   }
 }
+
+.hamburger{
+  display:none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+@media (max-width: 768px)
+{
+  .hamburger{
+    display:block;
+    position:absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .nav-links{
+    display: none;
+    width: 100%;
+    background: black;
+    /* transition: all 0.3s ease; */
+    position: absolute;
+    top: 80px;
+    left: 0;
+    z-index: 1000;
+  }
+.nav-inner a:hover{
+  color: gold;
+}
+
+  .nav-links.open{
+    display: block;
+  }
+
+  .nav-inner{
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .end{
+    display: flex;
+    gap: 20px;
+  }
+}
+
+header{
+  position: relative;
+}
+
+

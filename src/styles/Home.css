@@ -32,3 +32,132 @@ li{
 .HomePagePart{
     padding: 50px;
 }
+
+
+/* Hero Section */
+
+.hero-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 70px;
+    align-items: center;
+}
+
+.first{
+    height: 500px;
+}
+
+.second{
+    height: 500px;
+    background: #000;
+}
+
+.hero-section button{
+    width: 100px;
+    height: 50px;
+    background: green;
+}
+
+
+
+.abcd{
+    margin-left: 100px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.abcd div{
+    
+    text-align: center;
+    cursor: pointer;
+}
+
+.abcd img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+/* Hero section */
+
+.btns{
+    display: flex;
+    justify-content: center;
+}
+
+.Categories{
+    display: flex;
+    justify-content: center;
+    background: #ededed;
+    padding: 20px;
+}
+.Categories ul{
+    display: flex;
+    gap: 60px;
+}
+
+.Categories ul li{
+    border: 2px solid #ededed;
+    padding: 10px;
+}
+
+.Categories ul li:hover{
+    background : black;
+    color: white;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1024px){
+    .hero-section{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .first{
+        height:auto;
+    }
+    .second{
+        height:300px;
+    }
+
+    .HomePagePart{
+        padding: 20px;
+    }
+
+    .Categories ul{
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .hero-section{
+        padding: 30px 20px;
+    }
+
+    .Categories{
+        padding: 10px;
+    }
+    .Categories ul{
+        gap: 10px;
+    }
+
+    .Categories ul li{
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .hero-section button{
+        width: 100%now ;
+    }
+}

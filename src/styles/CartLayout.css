@@ -2,7 +2,7 @@
     padding: 30px;
     display: grid;
     grid-template-columns: 2fr 1fr;
-   
+    gap:20px;
 }
 
 .orders{
@@ -122,4 +122,52 @@ h1{
 .product-decre:hover{
     box-shadow: 5px 5px 5px 5px #ededed;
     background: #ededed;
+}
+
+
+/* Responsive CSS */
+
+@media (max-width:900px)
+{
+    .cart-layout{
+        grid-template-columns: 1fr;
+    }
+
+    .order-summary{
+        height:auto;
+        grid-template-rows: auto auto;
+    }
+
+    button{
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .order-1{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        text-align: center;
+    }
+
+    .img{
+        border-right: none;
+        border-bottom: 2px solid #ededed;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        background: white;
+    }
+
+    #cart-order-img{
+        width: 150px;
+        height: auto;
+    }
+
+    .add-remove-btns{
+        justify-content: center;
+    }
 }
