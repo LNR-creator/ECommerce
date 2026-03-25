@@ -1,9 +1,18 @@
-import React,{useState} from 'react'
+import React from 'react'
 import '../styles/CartLayout.css'
 
-const CartPagePart = ({ cart, products }) => {
+const CartPagePart = ({ cart,setCart, products }) => {
 
-  const [count,setcount] = useState(0);
+  // const [count,setcount] = useState(0);
+  const getQuantity = (id) => {
+    return cart.filter(item => item === id).length;
+  };
+
+  const totalPrice = cart.reduce((total,id)=>{
+    const product = products.find(p => p.id === id);
+    if(!product) return total;
+    return total + product.curr_price;
+  },0);
 
   return (
     <div className="cart-layout">
@@ -25,10 +34,33 @@ const CartPagePart = ({ cart, products }) => {
                 <div className="price">₹{product.curr_price}</div>
 
                 <div className="add-remove-btns-">
-                    <button className='product-incre' onClick={()=> setcount(count-1)}>-</button>
-                     {count}
-                    <button className='product-decre' onClick={()=> setcount(count+1)}>+</button>
-                    
+                    <button
+                      className='product-incre'
+                      onClick={() => {
+                        const itemIndex = cart.findIndex((item) => item === id);
+                        if (itemIndex !== -1) {
+                          const newCart = cart.filter((item, i) => i !== itemIndex);
+                          setCart(newCart);
+                        }
+                      }}
+                    >-</button>
+
+                    <span>{getQuantity(id)}</span>
+
+                    <button
+                      className='product-decre'
+                      onClick={() => {
+                        setCart([...cart, id]);
+                      }}
+                    >+</button>
+
+                    <button
+                      className='remove-btn'
+                      onClick={() => {
+                        const newCart = cart.filter((item, i) => i !== index);
+                        setCart(newCart);
+                      }}
+                    >Remove</button>
                 </div>
               </div>
             </div>
@@ -43,7 +75,7 @@ const CartPagePart = ({ cart, products }) => {
                 <div className="total">
                    <h1>Total</h1>
 
-                <p></p>
+                <p>₹ {totalPrice}</p>
                 </div>
 
                 <div className="order-btn">

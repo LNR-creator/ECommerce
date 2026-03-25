@@ -6,6 +6,7 @@ import '../styles/Home.css'
 import '../styles/ALL.css'
 import HomePagePart from '../PagesParts/HomePagePart'
 import { useState } from 'react'
+import img from '../assets/images/Herosection.png'
 
 const Home = ({handlecart}) => {
  
@@ -27,6 +28,7 @@ const Home = ({handlecart}) => {
     </div>
       </div>
       <div className="second">
+        <img src={img} alt="" srcset="" />
       </div>
       </div>
 

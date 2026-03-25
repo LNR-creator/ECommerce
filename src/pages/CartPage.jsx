@@ -3,10 +3,11 @@ import Navbar from '../components/Navbar'
 import CartPagePart from '../PagesParts/CartPagePart'
 
 const CartPage = ({cart,products}) => {
+  const [cartItem,setCartItem] = useState(cart);
   return (
     <div>
       <Navbar />
-      <CartPagePart cart={cart} products={products}/>
+      <CartPagePart cart={cartItem}  setCart={setCartItem} products={products}/>
     </div>
   )
 }
